@@ -28,35 +28,35 @@ export const switchTodo = (payload) => {
 const initialState = [
   {
     id: uuid(),
-    title: 't1',
-    contents: 'c1'
+    title: "t1",
+    contents: "c1",
     isDone: false,
   },
 
   {
     id: uuid(),
-    title: 't2',
-    contents: 'c2'
+    title: "t2",
+    contents: "c2",
     isDone: true,
   },
-]
+];
 const todos = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case ADD_TODO:
       return [...state, action.payload];
     case REMOVE_TODO:
-      return state.filter(item => item.id !== action.payload);
+      return state.filter((item) => item.id !== action.payload);
     case SWITCH_TODO:
-      state.map(item => {
+      return state.map((item) => {
         if (item.id === action.payload) {
-          return {...item, isDone: !item.isDone}
+          return { ...item, isDone: !item.isDone };
         } else {
           return item;
         }
       });
-      default:
-        return state;
-};
+    default:
+      return state;
+  }
 };
 
 export default todos;
