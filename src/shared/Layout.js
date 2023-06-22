@@ -8,6 +8,7 @@ const HeaderStyles = {
   alignItems: "center",
   paddingLeft: "20px",
   color: "white",
+  justifyContent: "center",
   fontWeight: "600",
 };
 const FooterStyles = {
@@ -32,7 +33,7 @@ const layoutStyles = {
 function Header() {
   return (
     <div style={{ ...HeaderStyles }}>
-      <span>Sparta Coding Club - Let's learn React</span>
+      <span>💎 Terry TodoList</span>
     </div>
   );
 }
@@ -40,7 +41,7 @@ function Header() {
 function Footer() {
   return (
     <div style={{ ...FooterStyles }}>
-      <span>copyright @SCC</span>
+      <span>copyright @Terry</span>
     </div>
   );
 }

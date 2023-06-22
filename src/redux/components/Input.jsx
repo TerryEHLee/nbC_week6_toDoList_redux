@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useDispatch } from "react-redux";
-import { uuid } from "react-uuid";
+import { v4 as uuidv4 } from "uuid";
 import { addTodo } from "../modules/todos";
 
 function Input() {
@@ -13,7 +13,7 @@ function Input() {
     event.preventDefault();
 
     const newTodo = {
-      id: uuid(),
+      id: uuidv4(),
       title,
       contents,
       isDone: false,
@@ -32,8 +32,12 @@ function Input() {
   return (
     <StyledInputBox>
       <form onSubmit={handleSubmitButtonClick}>
-        <input type='text' />
-        <input type='text' />
+        <input onChange={handleTitleInputChange} value={title} type='text' />
+        <input
+          onChange={handleContentsInputChange}
+          value={contents}
+          type='text'
+        />
         <button type='submit'>add⚡️</button>
       </form>
     </StyledInputBox>
@@ -43,6 +47,6 @@ function Input() {
 export default Input;
 
 const StyledInputBox = styled.div`
-  background-color: aqua;
+  background-color: #616464;
   padding: 20px;
 `;
