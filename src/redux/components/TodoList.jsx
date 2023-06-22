@@ -54,12 +54,12 @@ function TodoList({ isActive }) {
 export default TodoList;
 
 const StyledListBox = styled.div`
-  background-color: beige;
+  background-color: #20201f;
   padding: 20px;
 `;
 
 const StyledTodoBox = styled.div`
-  background-color: brown;
+  background-color: #060606;
   color: white;
   padding: 10px;
   margin: 5px;
