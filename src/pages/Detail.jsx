@@ -13,10 +13,9 @@ function Detail() {
 
   return (
     <StyledDetailBox>
-      <h3 styled={{ marginBottom: "10px" }}>Detail</h3>
-      title: {filteredTodo.title} <br />
-      contents: {filteredTodo.contents} <br />
-      isDone: {filteredTodo.isDone.toString()} <br />
+      <h1 styled={{ marginBottom: "10px" }}>{filteredTodo.title}</h1>
+      {filteredTodo.contents} <br />
+      id: {filteredTodo.id} <br />
       <button
         onClick={() => {
           navigate("/");
@@ -31,6 +30,6 @@ function Detail() {
 export default Detail;
 
 const StyledDetailBox = styled.div`
-  background-color: lavender
-  padding: 20px
+  background-color: lavender;
+  padding: 20px;
 `;

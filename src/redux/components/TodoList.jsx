@@ -30,7 +30,7 @@ function TodoList({ isActive }) {
               <h4>{item.title}</h4>
               <p>{item.contents}</p>
               <button onClick={() => handleSwitchButtonClick(item.id)}>
-                {isActive ? "⚡️ Complete" : "Cancle"}
+                {isActive ? "⚡️ Complete" : "💨 Back to work"}
               </button>
               <button onClick={() => handleDeleteButtonClick(item.id)}>
                 🍫 Delete

@@ -19,6 +19,9 @@ function Input() {
       isDone: false,
     };
     dispatch(addTodo(newTodo));
+
+    setTitle("");
+    setContents("");
   };
 
   const handleTitleInputChange = (event) => {
@@ -32,12 +35,18 @@ function Input() {
   return (
     <StyledInputBox>
       <form onSubmit={handleSubmitButtonClick}>
-        <input onChange={handleTitleInputChange} value={title} type='text' />
-        <input
-          onChange={handleContentsInputChange}
-          value={contents}
-          type='text'
-        />
+        <label>
+          🍏 Title:
+          <input onChange={handleTitleInputChange} value={title} type='text' />
+        </label>
+        <label>
+          🍎 Contents:
+          <input
+            onChange={handleContentsInputChange}
+            value={contents}
+            type='text'
+          />
+        </label>
         <button type='submit'>add⚡️</button>
       </form>
     </StyledInputBox>
